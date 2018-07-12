@@ -73,9 +73,6 @@ class Player(pg.sprite.Sprite):
         self.rect.x = HEIGHT/2
         self.rect.y = HEIGHT/2+240
 
-    
-
-
 class Wall(pg.sprite.Sprite):
     def __init__(self, x, y, height, width):
         pg.sprite.Sprite.__init__(self)
@@ -84,7 +81,6 @@ class Wall(pg.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-
 
 class Food(pg.sprite.Sprite):
     def __init__(self, x, y, height, width):
@@ -128,7 +124,7 @@ class OrangeGhost(pg.sprite.Sprite):
         self.moveTowardsPlayerX()
         self.checkHorrizonatal()
         self.moveToPlayerY()
-        # self.checkVertical()
+        self.checkVertical()
 
 
     def checkHorrizonatal(self):
